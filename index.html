@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>After School Activities</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h1 v-text="sitename"></h1>
+
+        <div id="lessons-page" v-if="!cartVisible">
+            <button class= "cartButton" v-on:click="cartVisible = true" v-show = "noOfItemsInCart > 0"> {{noOfItemsInCart}} cart </button>
+
+            <div v-for="lesson in lessons">
+                <img v-bind:src="lesson.image" width="200" >
+                <h2 v-text="lesson.name"></h2>
+                <p v-text="lesson.location"></p>
+                <p>Spaces left: {{ lesson.availability - itemInCart(lesson.id) }}</p>
+                <p> Price: £{{lesson.price}}</p>
+                <button @click="addToCart(lesson.id)" :disabled="!isAvailable(lesson.id)" >Add To Cart</button>
+            </div>
+        </div>
+
+        <div id="cart-page" v-else>
+            <button v-on:click="cartVisible = false">go back to Main Page</button>
+
+            cart will be here
+        </div>
+
+
+    </div>
+
+    <script src="lessons.js"></script>
+    <script>
+        let webstore = new Vue({
+            el: '#app',
+            data: {
+                sitename: ' After School Activities',
+                lessons: lessons,
+                cart: [],
+                cartVisible: false
+            },
+
+            methods: {
+
+                addToCart(id) {
+                    this.cart.push(id)
+                }, 
+                itemInCart(id) {
+                    let total = 0;
+                    this.cart.forEach(lessonID => {
+                        if(lessonID == id) {
+                            total++;
+                        }
+                    });
+
+                    return total;
+                },
+                isAvailable(id) {
+                    
+                    let availability = true;
+
+                    this.lessons.forEach(lesson => {
+                        if(lesson.id == id) {
+                            availability = (lesson.availability - this.itemInCart(id)) > 0 ? true : false;
+                        }
+                    });
+
+                    return availability;
+                    
+                }
+            },
+            computed: {
+                noOfItemsInCart(){
+                    return this.cart.length;
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
