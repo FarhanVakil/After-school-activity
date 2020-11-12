@@ -16,7 +16,6 @@
 
         <div id="lessons-page" v-if="!cartVisible">
             <button class= "cartButton" v-on:click="cartVisible = true" v-show = "noOfItemsInCart > 0"> {{noOfItemsInCart}} cart </button>
-
             <div v-for="lesson in lessons">
                 <img v-bind:src="lesson.image" width="200" >
                 <h2 v-text="lesson.name"></h2>
