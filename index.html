@@ -84,9 +84,11 @@
             <p>City: {{order.city}}</p>
             <p>PostCode: {{order.postCode}}</p>
             <p>State: {{order.state}}</p>
+            <p>Gift?: {{order.gift}}</p>
+            <p>Method: {{order.method}}</p>
+            <button @click='submitForm'>Submit Order</button>
            
         </div>
-
 
     </div>
 
@@ -137,7 +139,10 @@
                     });
 
                     return availability;
-                    
+                  
+                },
+                submitForm(){
+                    alert('Order submitted!')
                 }
             },
             computed: {
