@@ -30,6 +30,45 @@
             <button v-on:click="cartVisible = false">go back to Main Page</button>
 
             cart will be here
+            <h1>Checkout</h1>
+
+            <p>
+             <strong>First Name:</strong>   
+            <input v-model="order.firstName"/> 
+            </p>
+            <p></p>
+            <strong>Last Name:</strong>   
+            <input v-model="order.lastName"/> 
+            </p>
+            <p>
+            <strong>Address:</strong>   
+            <input v-model="order.address"/> 
+            </p>
+            <p>
+            <strong>City:</strong>   
+            <input v-model="order.city"/> 
+            </p>
+            <p>
+            <strong>State:</strong>   
+            <select v-model="order.state"> 
+                <option disabled value="">State</option>
+                <option>AL</option>
+                <option>AR</option>
+                <option>CA</option>
+                <option>NV</option>
+               </select>
+            </p>
+            <p>
+            <strong>Zip/Postal Code:</strong>   
+            <input v-model="order.postCode"/> 
+            </p>
+            <h2>Order Information</h2>
+            <p>First Name: {{order.firstName}}</p>
+            <p>Last Name: {{order.lastName}}</p>
+            <p>Address: {{order.address}}</p>
+            <p>City: {{order.city}}</p>
+            <p>PostCode: {{order.postCode}}</p>
+            <p>State: {{order.state}}</p>
         </div>
 
 
@@ -43,7 +82,15 @@
                 sitename: ' After School Activities',
                 lessons: lessons,
                 cart: [],
-                cartVisible: false
+                cartVisible: false,
+                order: {
+                    firstName:'',
+                    lastName:'',
+                    address:'',
+                    city:'',
+                    state:'',
+                    postCode:''
+                },
             },
 
             methods: {
