@@ -71,4 +71,22 @@ let lessons= [
         price:100,
         availability:5
     },
+
+    {
+        id:9,
+        name: 'Gym',
+        image:'gym.jpg',
+        location:'Park Royal',
+        price:50,
+        availability:5
+    },
+
+    {
+        id:10,
+        name: 'Basketball',
+        image:'basketball.jpg',
+        location:'Park Royal',
+        price:100,
+        availability:5
+    },
 ];
