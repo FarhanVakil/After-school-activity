@@ -5,7 +5,7 @@ let lessons= [
         image:'football.jpg',
         location:'Chelsea',
         price:150,
-        availability:10
+        availability:5
     
     },
 
@@ -15,7 +15,7 @@ let lessons= [
         image:'cricket.jpg',
         location:'Harrow',
         price:200,
-        availability:10
+        availability:5
     },
 
     {
@@ -24,7 +24,7 @@ let lessons= [
         image:'swimming.jpg',
         location:'Acton Town',
         price:150,
-        availability:10
+        availability:5
     },
     
     {
@@ -33,7 +33,7 @@ let lessons= [
         image:'rugby.jpg',
         location:'Watford',
         price:150,
-        availability:10
+        availability:5
     },
 
     {
@@ -51,6 +51,24 @@ let lessons= [
         image:'bowling.jpg',
         location:'Park Royal',
         price:50,
+        availability:5
+    },
+
+    {
+        id:7,
+        name: 'Tennis',
+        image:'tennis.jpg',
+        location:'Wimbledon',
+        price:200,
+        availability:5
+    },
+
+    {
+        id:8,
+        name: 'Golf',
+        image:'golf.jpg',
+        location:'Watford',
+        price:100,
         availability:5
     },
 ];
