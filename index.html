@@ -63,7 +63,13 @@
             <input v-model="order.postCode"/> 
             </p>
             <p>
-                <input type= "checkbox" id="gift" v-model='order.gift'>
+                <input 
+                    type= "checkbox" 
+                    id="gift" 
+                    v-model='order.gift'
+                    :true-value="order.sendGift"
+                    :false-value="order.dontSendGift"
+                >
                 <label for="gift">Ship As Gift?</label>
             </p>
             <p>
@@ -110,6 +116,8 @@
                     postCode:'',
                     gift:'',
                     method:'',
+                    sendGift:'Send as a gift',
+                    dontSendGift:'Do not send as a gift',
                 },
             },
 
