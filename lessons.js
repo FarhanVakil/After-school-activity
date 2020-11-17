@@ -43,6 +43,14 @@ let lessons= [
         location:'Wembley Park',
         price:50,
         availability:5
-    }
+    },
 
+    {
+        id:6,
+        name: 'Bowling',
+        image:'bowling.jpg',
+        location:'Park Royal',
+        price:50,
+        availability:5
+    },
 ];
