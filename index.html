@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>After School Activities</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/
-    font-awesome/5.14.0/css/all.min.css">
 
     <script src="https://unpkg.com/vue"></script>
 </head>
@@ -31,7 +29,6 @@
         <div id="cart-page" v-else>
             <button v-on:click="cartVisible = false">go back to Main Page</button>
 
-            cart will be here
             <h1>Checkout</h1>
 
             <p>
@@ -46,6 +43,12 @@
             <strong>Address:</strong>   
             <input v-model="order.address"/> 
             </p>
+            <p>
+                <strong>Phone:</strong>   
+                <input v-model="order.phone"/> 
+                </p>
+
+
             <p>
             <strong>City:</strong>   
             <input v-model="order.city"/> 
@@ -89,6 +92,7 @@
             <p>First Name: {{order.firstName}}</p>
             <p>Last Name: {{order.lastName}}</p>
             <p>Address: {{order.address}}</p>
+            <p>Phone: {{order.phone}}</p>
             <p>City: {{order.city}}</p>
             <p>PostCode: {{order.postCode}}</p>
             <p>State: {{order.state}}</p>
