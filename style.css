@@ -1,4 +1,27 @@
 .cartButton{
-    width: 150px;
-    height: 45px;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: lightblue;
+    cursor: pointer;  
+}
+
+
+.addToCart{
+    width: 50px;
+    height: 20;
+    background-color: lightblue;
+}
+
+.cartVisible{
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: lightblue;
+}
+.submitForm{
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: lightblue;
 }
