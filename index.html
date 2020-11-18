@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>After School Activities</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/
+    font-awesome/5.14.0/css/all.min.css">
 
     <script src="https://unpkg.com/vue"></script>
 </head>
@@ -15,7 +17,7 @@
         <h1 v-text="sitename"></h1>
 
         <div id="lessons-page" v-if="!cartVisible">
-            <button class= "cartButton" v-on:click="cartVisible = true" v-show = "noOfItemsInCart > 0"> {{noOfItemsInCart}} cart </button>
+            <button class= "cartButton" v-on:click="cartVisible = true" v-show = "noOfItemsInCart > 0"> {{noOfItemsInCart}} Checkout </button>
             <div v-for="lesson in lessons">
                 <img v-bind:src="lesson.image" width="200" >
                 <h2 v-text="lesson.name"></h2>
@@ -36,7 +38,7 @@
              <strong>First Name:</strong>   
             <input v-model="order.firstName"/> 
             </p>
-            <p></p>
+            <p>
             <strong>Last Name:</strong>   
             <input v-model="order.lastName"/> 
             </p>
