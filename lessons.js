@@ -5,7 +5,7 @@ let lessons= [
         image:'football.jpg',
         location:'Chelsea',
         price:150,
-        availability:5
+        availability: 7
     
     },
 
