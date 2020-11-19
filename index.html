@@ -28,7 +28,7 @@
 
         <div id="cart-page" v-else>
             <button v-on:click="cartVisible = false">go back to Main Page</button>
-
+            
             <h1>Checkout</h1>
 
             <p>
@@ -44,11 +44,9 @@
             <input v-model="order.address"/> 
             </p>
             <p>
-                <strong>Phone:</strong>   
-                <input v-model="order.phone"/> 
-                </p>
-
-
+            <strong>Phone:</strong>   
+            <input v-model.number="order.phone"/> 
+            </p>
             <p>
             <strong>City:</strong>   
             <input v-model="order.city"/> 
